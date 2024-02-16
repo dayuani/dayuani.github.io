@@ -1,0 +1,270 @@
+/* css  variable */
+:root{
+    --primary: #ddd;
+    --secondary: #565C21;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104,104,104, 0.8); 
+}
+html{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+}
+
+body{
+    background: #ffffff;
+   margin: 0;
+    line-height: 1.4;
+}
+
+.btn{
+    background: var(--secondary);
+    color: var(--light);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+.wrapper{
+    display: grid;
+    /* gap: 20px;  */
+}
+
+/* Header */
+.header{
+    background: url(img/header.png);
+    background-size: cover;
+    min-height: 400px;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+.header h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+    color: var(--light);
+}
+.header p{
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--light);
+}
+.boxes{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 100px;
+}
+.boxes img{
+    width: 100px;
+    height: 100px;
+
+}
+
+
+.boxes h5{
+    font-size: medium;
+    
+}
+.box{
+    
+    text-align: center;
+    padding: 1.5rem 2rem;
+    
+}
+
+/* informasi */
+.informasi .info-1{
+    display: grid;  
+    grid-template-columns: repeat(2, 1fr);
+}
+.informasi .info-1 img{
+    width: 100%;
+    height: 500px;
+    
+}
+.informasi .info-1 .capt{
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem ;
+}.informasi .info-1 .capt h2{
+    font-size: 40px;
+}
+.informasi .info-1 .capt a{
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+/* info 2 */
+.informasi .info-2{
+    display: grid;  
+    grid-template-columns: repeat(2, 1fr);
+}
+.informasi .info-2 img{
+    width: 100%;
+    height: 500px;
+    
+}
+.informasi .info-2 .capt{
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}.informasi .info-2 .capt h2{
+    font-size: 40px;
+}
+.informasi .info-2 .capt a{
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+/* info 3 */
+.informasi .info-3{
+    display: grid;  
+    grid-template-columns: repeat(2, 1fr);
+}
+.informasi .info-3 img{
+    width: 100%;
+    height: 500px;
+    
+}
+.informasi .info-3 .capt{
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}.informasi .info-3 .capt h2{
+    font-size: 40px;
+}
+.informasi .info-3 .capt a{
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+/* media queries */
+@media (max-width: 700px){
+    .boxes{
+        grid-template-columns: repeat(2, fr);
+    }
+    .informasi .info-1{
+        
+        grid-template-columns: 1fr;
+    }
+    .informasi .info-1 .capt h2{
+       
+    }
+    .informasi .info-1 .capt p{
+        font-size: 3rem;
+    }
+    .informasi .info-1 .capt a{
+        margin: auto;
+        width: 100%;
+        
+    }
+
+
+
+
+    .informasi .info-2{
+        
+        grid-template-columns: 1fr;
+    }
+    .informasi .info-2 .capt a{
+        margin: auto;
+        width: 100%;
+        
+    }
+    .informasi .info-3{
+        
+        grid-template-columns: 1fr;
+    }
+    .informasi .info-3 .capt a{
+        margin: auto;
+        width: 100%;
+        
+    }
+    
+}
+
+
+@media (max-width: 500px) {
+    .header h1{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        color: var(--light);
+        
+    }
+    .header p{
+        font-size: 0.9rem;
+        margin-top: 0;
+        color: var(--light);
+    }
+    .btn{
+        background: var(--secondary);
+        color: var(--light);
+        padding: 0.3rem 0.9rem;
+        text-decoration: none;
+        border: 0;
+    }
+    .boxes{
+        
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+       
+    }
+    .boxes img{
+        width: 100px;
+        height: 100px;
+    }
+    .box{
+        
+        text-align: center;
+        
+        
+    }
+    .informasi .info-1 .capt a,
+    .informasi .info-2 .capt a,
+    .informasi .info-3 .capt a{
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+    .informasi .info-1 .capt h2,
+    .informasi .info-2 .capt h2,
+    .informasi .info-3 .capt h2{
+        font-size: 1.7rem;
+    }
+    .informasi .info-1 .capt p,
+    .informasi .info-2 .capt p,
+    .informasi .info-3 .capt p{
+        font-size: 0.8rem;
+        
+    }
+
+    .informasi .info-2 img{
+        order: 1;
+    }
+    .informasi .info-2 .capt{
+        order: 2;
+    }
+    .box{
+    
+        text-align: center;
+        padding: 0.1rem ;
+        
+    }
+}
